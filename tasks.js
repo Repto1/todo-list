@@ -40,10 +40,12 @@ export class TasksList {
       const listCreate = document.createElement('li');
       const buttonCreate = document.createElement('button');
       buttonCreate.innerText = 'remove';
+      buttonCreate.classList.add('btn', 'btn-danger', 'ms-3');
       buttonCreate.addEventListener('click', () => {
         this.remove(task);
       });
       listCreate.innerText = task;
+      listCreate.classList.add('mt-3');
       listCreate.appendChild(buttonCreate);
       this.ul.appendChild(listCreate);
     });
